@@ -1,0 +1,8 @@
+h1{
+    color:blueviolet;
+}
+
+.complete{
+    text-decoration: line-through;
+    color:gray;
+}
