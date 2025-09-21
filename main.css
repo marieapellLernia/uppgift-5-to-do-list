@@ -1,8 +1,16 @@
 h1{
+
     color:blueviolet;
 }
 
-.complete{
+.completed{
+
     text-decoration: line-through;
     color:gray;
+}
+
+.count{
+    
+    color:rgb(20, 146, 41)
+
 }
