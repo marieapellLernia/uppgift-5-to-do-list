@@ -1,6 +1,10 @@
+body{
+    background-color: rgb(187, 171, 187);
+}
+
 h1{
 
-    color:blueviolet;
+    color:rgb(126, 28, 118);
 }
 
 .completed{
@@ -14,3 +18,4 @@ h1{
     color:rgb(20, 146, 41)
 
 }
+
