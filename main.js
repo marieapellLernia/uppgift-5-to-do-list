@@ -77,16 +77,23 @@ const trashcan = document.createElement("span");
 trashcan.innerHTML = "&#128465;";
 trashcan.classList.add("traschcan");
 
-trashcan.addEventListener("click", function(){
+trashcan.addEventListener("click", 
+    
+    function(){
     item.remove();
     let removeText = item.firstChild.textContent;
     let indexToRemove = theTodoArray.map(t => t.name).indexOf(removeText);
     theTodoArray.splice(indexToRemove, 1);
-    completed--;
-    completedCount.textContent = "Du har " + completed + " avklarade ToDo's."
-
     
-})
+       if(item.classList.contains("completed"))
+       {
+        completed--;
+        completedCount.textContent = "Du har " + completed + " avklarade ToDo's."
+
+       }
+
+    }
+)
 
 item.appendChild(trashcan);
 
