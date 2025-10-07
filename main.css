@@ -1,10 +1,11 @@
 body{
-    background-color: rgb(187, 171, 187);
+    background: linear-gradient(to top , #f07775, #f1d4d3);
+    height: 100vh;
 }
 
 h1{
 
-    color:rgb(126, 28, 118);
+    color:black;
 }
 
 .completed{
@@ -16,7 +17,7 @@ h1{
 
 .count{
     
-    color:rgb(20, 146, 41)
+    color: red
 
 }
 
@@ -28,8 +29,37 @@ h1{
     cursor: pointer;
 }
 
+.header {
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  text-align: center;
+
+  opacity: 0;
+  animation: flyIn 1s ease-out forwards;
+}
+
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .input{
 
     cursor: default;
-
+    border: 1px solid black;
+    border-radius: 3px;
 }
