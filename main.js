@@ -31,8 +31,6 @@ if(todoText.length == 0){
   void infoText.offsetWidth; 
   infoText.classList.add("blink");
 
-  
-
    return;
 }
 
