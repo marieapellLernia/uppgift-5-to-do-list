@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to top , #f07775, #f1d4d3);
+    background: linear-gradient(to top , #ee6b69, #f1d4d3);
     height: 100vh;
 }
 
@@ -37,6 +37,7 @@ h1{
   border: 1px solid white;
   border-radius: 3px;
   text-align: center;
+  box-shadow: 0 4px 10px #ee6b69(0, 0, 0, 0.3);
 
   opacity: 0;
   animation: flyIn 1s ease-out forwards;
@@ -62,8 +63,20 @@ input{
     cursor: default;
     border: 1px solid black;
     border-radius: 3px;
+    height: 20px;
+    width: 150px;
 }
 
 input:focus{
     outline: 1px solid #007BFF;
 }
+
+
+ul li {
+     font-family: Arial, Helvetica, sans-serif;
+     list-style-type: none;
+     font-size: 20px;
+     
+}
+
+
