@@ -26,6 +26,13 @@ todoText = inputTodo.value;
 
 if(todoText.length == 0){
    infoText.textContent = "Du kan inte ha tomma ToDo's i en ToDo lista"
+   
+   infoText.classList.remove("blink");
+  void infoText.offsetWidth; 
+  infoText.classList.add("blink");
+
+  
+
    return;
 }
 
