@@ -1,44 +1,55 @@
 body{
-    background: linear-gradient(to top , #ee6b69, #f1d4d3);
-    height: 100vh;
+  background: linear-gradient(to top , #ee6b69, #fac7c5);
+  height: 100vh;
 }
 
 h1{
-
-    color:black;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color:black;
+  font-size: 40px;
 }
 
 .completed{
 
-    text-decoration: line-through;
-    color:gray;
-    cursor: default;
+  text-decoration: line-through;
+  color:gray;
+  cursor: default;
+  transition: color 1s ease
+     
 }
 
 .count{
     
-    color: black;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  margin-bottom: 20px;
 
 }
 
-.traschcan{
+.traschcan i {
+  color: rgb(173, 173, 173);
+  font-size:large;
+  margin-left: 8px;
+  background-color: white;
+  cursor: pointer;
+  transition: color 0.5s ease-out;
+}
 
-    font-size:large;
-    margin-left: 8px;
-    background-color: white;
-    cursor: pointer;
+.traschcan i:active {
+    color: #3a3a3a; 
 }
 
 .header {
   background-color: white;
   width: 30%;
-  margin: auto;
-  padding: 20px 20px;
+  margin: auto;;
+  padding: 10px 20px 35px;
   border: 1px solid white;
-  border-radius: 3px;
+  border-radius: 1px;
   text-align: center;
-  box-shadow: 0 4px 10px #ee6b69(0, 0, 0, 0.3);
-
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
   animation: flyIn 1s ease-out forwards;
 }
@@ -59,20 +70,37 @@ h1{
 }
 
 input{
-
-    cursor: default;
-    border: 1px solid black;
-    border-radius: 3px;
-    height: 20px;
-    width: 150px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  height: 30px;
+  width: 200px;
+  font-size: 20px;
+  padding: 1px 5px;
 }
 
 input:focus{
-    outline: 1px solid #007BFF;
+  outline: 1px solid #007BFF;
+}
+
+button{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  height: 35px;
+  width: 50px
+}
+
+button:hover {
+  background-color: rgb(209, 209, 209);
 }
 
 small{
-    color: red;
+    color: rgb(170, 11, 11);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-bottom: 20px;
+    display: block;
 }
 
 .blink{
@@ -91,12 +119,29 @@ ul{
 }
 
 ul li {
-     font-family: Arial, Helvetica, sans-serif;
-     list-style-type: none;
-     font-size: 20px;
-     text-align: center;
-     margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style-type: none;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10px;
+  color: black;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
     
+}
+
+.fadeIN {
+  opacity: 0;
+  transform: translateY(20px); 
+  animation: fadeIN  ease-out forwards;
+}
+
+@keyframes fadeIN {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
