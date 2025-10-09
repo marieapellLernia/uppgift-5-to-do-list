@@ -25,7 +25,7 @@ infoText.textContent = "";
 todoText = inputTodo.value;
 
 if(todoText.length == 0){
-   infoText.textContent = "Du kan inte ha tomma ToDo's i en ToDo lista"
+   infoText.textContent = "Input must not be empty";
    
    infoText.classList.remove("blink");
   void infoText.offsetWidth; 
@@ -41,6 +41,12 @@ theTodoArray.push(todoObject);
 
 const item = document.createElement("li");
 todoList.appendChild(item);
+item.classList.add("fadeIN");
+
+item.addEventListener("animationend", () => {
+   item.classList.remove("fadeIN");
+});
+
 
 
 //Add todo text as a span on the li
@@ -55,7 +61,7 @@ itemText.addEventListener("click",
         {
             item.setAttribute("class", "");
             completed--;
-            completedCount.textContent = "Du har " + completed + " avklarade ToDo's."
+            completedCount.textContent = completed + " completed"
             changeStatus(itemText.innerText, false)
 
         }
@@ -64,12 +70,10 @@ itemText.addEventListener("click",
         {
             item.setAttribute("class", "completed");
             completed++;
-            completedCount.textContent = "Du har " + completed + " avklarade ToDo's."
+            completedCount.textContent = completed + " completed"
             changeStatus(itemText.innerText, true)
         
         }
-
-
 
     }
 )
@@ -79,7 +83,7 @@ item.appendChild(itemText);
 
 //Add traschcan as a span on li
 const trashcan = document.createElement("span");
-trashcan.innerHTML = "&#128465;";
+trashcan.innerHTML = `<i class="fa-regular fa-trash-can"></i>`;
 trashcan.classList.add("traschcan");
 
 trashcan.addEventListener("click", 
@@ -93,7 +97,7 @@ trashcan.addEventListener("click",
        if(item.classList.contains("completed"))
        {
         completed--;
-        completedCount.textContent = "Du har " + completed + " avklarade ToDo's."
+        completedCount.textContent = completed + " completed"
 
        }
 
