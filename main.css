@@ -11,7 +11,6 @@ h1 {
 }
 
 .completed {
-
   text-decoration: line-through;
   color: gray;
   cursor: default;
@@ -19,7 +18,6 @@ h1 {
 }
 
 .count {
-
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
@@ -44,7 +42,6 @@ h1 {
   background-color: white;
   width: 30%;
   margin: auto;
-  ;
   padding: 10px 20px 35px;
   border: 1px solid white;
   border-radius: 1px;
@@ -106,10 +103,10 @@ small {
 }
 
 .blink {
-  animation: blink 0.5s step-start 3;
+  animation: blinkText 0.5s step-start 3;
 }
 
-@keyframes blink {
+@keyframes blinkText{
 
   0%,
   100% {
@@ -137,13 +134,12 @@ ul li {
   cursor: pointer;
   letter-spacing: 0.5px;
   margin-top: 10px;
-
 }
 
 .fadeIN {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeIN ease-out forwards;
+  animation: fadeIN 0.5s ease-out forwards;
 }
 
 @keyframes fadeIN {
